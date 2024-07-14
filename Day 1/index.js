@@ -35,3 +35,6 @@ console.log(`Previous constant value: ${constvar}`);
 // It raises an error because of assignment to a constant variable.
 // constvar = 87;
 // console.log(`Next constant value: ${constvar}`);
+
+// Using console.table() to print the data in tabular form
+console.table([num, str, bool, myvar, typeof bool]);
