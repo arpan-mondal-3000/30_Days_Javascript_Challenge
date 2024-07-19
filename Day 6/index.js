@@ -37,6 +37,8 @@ console.log(arr4);
 // Reduce method takes a function with two arguments an accumulator and a current value and returns at the last iteration
 // of the array element their result
 let arr5 = arr2.reduce((a, c) => a + c);
+// If initial value is not provided then accumulator becomes the value of the first index and iteration starts from second index
+// If initial value is provided as the second parameter then accumulator becomes the initial value and iteration starts from first index
 console.log(arr5);
 
 // Activity 4
