@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Day 10</title>
+   <style>
+      .container{
+         width: 600px;
+      }
+      .img{
+         width: 100%;
+         object-fit: cover;
+      }
+      .box{
+         margin: 20px;
+         width: 150px;
+         height: 150px;
+         background-color: burlywood;
+      }
+      .box1{
+         position: absolute;
+         top:0;
+         left:0;
+         width: 50px;
+         height: 50px;
+         border: 3px solid red;
+         border-radius: 50%;
+      }
+      #lang{
+         display: inline;
+         margin: 20px;
+      }
+      #langShow{
+         display: inline;
+      }
+   </style>
+</head>
+<body>
+   <button id="btn1">Change para</button>
+   <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, nobis autem amet, beatae aliquam quod similique sint facilis sequi et iusto quo quam corrupti tenetur ipsa nihil veniam esse dolore!</p>
+   <div class="container" style="border: 3px solid black">
+      <img src="https://images.unsplash.com/photo-1720986073399-f5c24e020ca1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunset" class="img" height="300px">
+   </div>
+   <h3>Double click on the box to show image</h3>
+   <div class="box"></div>
+   <div class="box1"></div>
+   <input type="text" id="in1">
+   <div class="show"></div>
+   <br/>
+   <form id="form1">
+      <label for="text">Enter your data</label>
+      <input type="text" name="text" id="in2">
+      <input type="submit" value="Submit">
+   </form>
+   <select name="lang" id="lang">
+      <option value="Bengali">Bengali</option>
+      <option value="English">English</option>
+      <option value="Hindi">Hindi</option>
+      <option value="Tamil">Tamil</option>
+   </select>
+   <p id="langShow"></p>
+   <ul id="list">
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Java</li>
+      <li>C</li>
+      <li>C++</li>
+      <li>Rust </li>
+   </ul>
+   <div id="parent"></div>
+   <script src="index.js"></script>
+</body>
+</html>

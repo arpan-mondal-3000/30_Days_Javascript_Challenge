@@ -63,8 +63,13 @@ box.setAttribute(
 );
 box.style.height = "50px";
 box.style.width = "150px";
+box.style.border = "2px solid transparent";
 
 box.addEventListener("mouseover", (event) => {
   event.target.style.cursor = "pointer";
   box.style.border = "2px solid white";
+});
+
+box.addEventListener("mouseout", (event) => {
+  event.target.style.border = "2px solid transparent";
 });
