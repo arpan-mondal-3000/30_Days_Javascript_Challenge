@@ -1,0 +1,16 @@
+{
+  "name": "day-13-modules",
+  "version": "1.0.0",
+  "description": "modules",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "lodash": "^4.17.21"
+  }
+}
