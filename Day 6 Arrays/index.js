@@ -46,7 +46,7 @@ let numarr = [1, 2, 3, 4, 5];
 //for(let i = 0; i < numarr.length; i++) console.log(numarr[i]);
 
 // forEach method executes a function for each of the elements in an array
-//numarr.forEach((num)=>console.log(num));
+numarr.forEach((num) => console.log(num));
 
 // Activity 5
 let twoDarr = [
