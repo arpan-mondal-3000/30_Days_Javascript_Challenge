@@ -95,3 +95,29 @@ newBox2.add("name", "Suman");
 newBox2.listItems();
 
 // Activity 5
+
+function remFact() {
+  let memory = {};
+  return function fact(n) {
+    if (n in memory) return memory[n];
+    let ans = 1,
+      t = n;
+    while (t > 0) {
+      if (t in memory) {
+        ans *= memory[t];
+        // console.log(memory);
+        break;
+      }
+      ans *= t;
+      t--;
+    }
+    memory[n] = ans;
+    // console.log(memory);
+    return ans;
+  };
+}
+
+const newFact = remFact();
+console.log(newFact(5));
+console.log(newFact(7));
+console.log(newFact(10));
