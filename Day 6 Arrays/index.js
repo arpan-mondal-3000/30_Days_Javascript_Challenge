@@ -67,3 +67,12 @@ twoDarr.forEach((e) => {
 });
 
 console.log("Specific element:", twoDarr[0][2]);
+
+// Method chaining
+let numArr = [1, 2, 3, 4, 5, 6];
+let newNumArr = numArr
+  .map((n) => n * 10)
+  .map((n) => n + 2)
+  .filter((n) => n >= 30);
+console.log(numArr);
+console.log(newNumArr);
