@@ -85,3 +85,27 @@ function func2(a) {
 }
 
 console.log(twoFunc(23, func1, func2));
+
+// If a function is declaired it is automatically hoisted to the top of execution and we have the function to run
+// for example
+
+add(2, 3); // here the function is declaired after the call but as it was declared and not expressed so it is fine
+function add(a, b) {
+  console.log(a + b);
+}
+
+// But if there is a function expression this will not work
+// addNums(4, 5); this line will throw an error
+const addNums = (a, b) => {
+  console.log(a + b);
+};
+
+// wrtting two IIFEs back to back
+(() => {
+  console.log("IIFE 1");
+})(); // this semicolon here is very important as without this IIFE 1 will not be able to tell
+//  whether it is done executing or not and it wil throw an error when it will try to run the next IIFE
+
+(() => {
+  console.log("IIFE 2");
+})();
