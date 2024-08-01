@@ -56,3 +56,16 @@ for (prop in book3) {
 Object.keys(book3).forEach((prop) => console.log(prop));
 // returns an array of all the properties: ["title", "author", "year", "getTitle"]
 Object.values(book3).forEach((val) => console.log(val));
+
+// Using a symbol as a key in an object
+const mySym = Symbol("key1");
+let user = new Object();
+user = {
+  userName: "Arpan Mondal",
+  email: "example@example.com",
+  [mySym]: "The key is symbol", // this is the syntax to use symbol as a key
+};
+
+// to access the value that is stores using a symbol
+console.log(user[mySym]);
+console.log(user);

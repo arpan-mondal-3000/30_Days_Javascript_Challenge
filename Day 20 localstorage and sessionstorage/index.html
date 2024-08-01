@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Localstorage and sessionstorage</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      body{
+         background-color: rgb(40, 34, 77);
+         color: white;
+         font-family: sans-serif;
+      }
+      .myform{
+         margin: 10px;
+         padding: 20px;
+         display: flex;
+         flex-direction: column;
+         max-width: 25rem;
+         gap: 10px;
+      }
+      .form-input{
+         padding: 5px 15px;
+         border-radius: 5px;
+         border: none;
+      }
+      .btn{
+         padding: 5px;
+         cursor: pointer;
+         border-radius: 23px;
+         border: 3px solid white;
+      }
+      .container{
+         display: grid;
+         height: 70vh;
+         place-items: center;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <h1>LocalStorage and sessionStorage</h1>
+      <form class="myform">
+         <input type="text" required placeholder="Enter your name here" name="name" class="form-input" id="name">
+         <input type="email" name="email" required placeholder="Enter your email here" class="form-input" id="email">
+         <input type="submit" value="Submit" class="btn">
+      </form>
+      <h2 id="output"></h2>
+   </div>
+   <script src="index.js"></script>
+</body>
+</html>
