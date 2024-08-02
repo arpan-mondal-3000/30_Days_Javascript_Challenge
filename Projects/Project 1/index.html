@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Background color changer</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: sans-serif;
+      }
+
+      .dark{
+         color: white;
+      }
+
+      .container{
+         display: flex;
+         flex-direction: column;
+         height: 100vh;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .boxes{
+         display: flex;
+         gap: 2rem;
+         padding: 2rem;
+         margin-top: 3rem;
+      }
+
+      .box{
+         width: 150px;
+         height: 150px;
+         border: 2px solid black;
+         border-radius: 8px;
+      }
+      .box:hover{
+         cursor: pointer;
+         transition: all;
+         animation: btn 300ms;
+         transform: translateY(-5px);
+      }
+      @keyframes btn {
+         0%{
+            transform: translate(0);
+         }
+         100%{
+            transform: translateY(-5px);
+         }
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <h2>Select any color to change the Background color of the page</h2>
+      <div class="boxes">
+         <div class="box" id="white"></div>
+         <div class="box" id="slate"></div>
+         <div class="box" id="green"></div>
+         <div class="box" id="orange"></div>
+      </div>
+   </div>
+   <script src="index.js"></script>
+</body>
+</html>

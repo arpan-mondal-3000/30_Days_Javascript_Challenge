@@ -1,0 +1,75 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+body{
+   background-color: #1E293B;
+   color: white;
+}
+
+.container{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.box{
+   border: 2px solid white;
+   padding: 3rem;
+   border-radius: 23px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+#myform{
+   display: flex;
+   flex-direction: column;
+   width: 24rem;
+   gap: 1rem;
+   margin: 20px;
+}
+
+#guess{
+   padding: 10px;
+   text-align: center;
+   font-size: 24px;
+   border-radius: 8px;
+   border: none;
+}
+
+.btn{
+   padding: 5px;
+   cursor: pointer;
+   border: 2px solid transparent;
+   border-radius: 10px;
+   font-weight: 700;
+   color: white;
+   background-color: #F59E0B;
+   margin: 10px;
+   padding: 5px 15px;
+}
+
+.btn:hover{
+   border: 2px solid white;
+}
+
+.message{
+   margin-top: 20px;
+}
+
+#prev{
+   background-color: #323232;
+   padding: 5px;
+}
+
+#result{
+   color: #F59E0B;
+}

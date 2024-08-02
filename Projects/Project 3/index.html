@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Local time</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: sans-serif;
+      }
+      body{
+         background-color: #1E293B;
+         color: white;
+      }
+      .container{
+         display: flex;
+         height: 100vh;
+         justify-content: center;
+         align-items: center;
+      }
+      .box{
+         background-color: #EF4444;
+         padding: 5rem;
+         border-radius: 23px;
+         height: 12rem;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+      #time{
+         font-size: 3rem;
+         text-align: center;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="box">
+         <h1>Your local time: </h1>
+         <div id="time"></div>
+      </div>
+   </div>
+   <script src="index.js"></script>
+</body>
+</html>
