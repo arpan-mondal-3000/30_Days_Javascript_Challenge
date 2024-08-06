@@ -1,0 +1,162 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+body{
+   background-color: #1E293B;
+   color: white;
+}
+
+nav{
+   height: 3rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem 0;
+   border-bottom: 1px solid white;
+   border-bottom-right-radius: 12px;
+   border-bottom-left-radius: 12px;
+   position: sticky;
+   top: 0;
+   background-color: #1E293B;
+}
+
+nav ul{
+   display: flex;
+   gap: 3rem;
+   list-style-type: none;
+   margin-left: 3rem;
+}
+
+nav ul li a{
+   text-decoration: none;
+   color: white;
+   font-weight: 700;
+   padding: 5px 10px;
+   border-radius: 6px;
+}
+
+nav ul li a:hover{
+   background-color: #fff;
+   color: black;
+}
+
+nav form{
+   margin-right: 3rem;
+}
+
+#movie{
+   padding: 5px 10px;
+   border: 2px solid white;
+   font-size: 16px;
+   border-radius: 4px;
+}
+
+#search{
+   padding: 6px 10px;
+   background-color: #F97316;
+   border: 2px solid #F97316;
+   border-radius: 4px;
+   color: white;
+   font-weight: 700;
+}
+
+#search:hover{
+   background-color: #FDBA74;
+   border-color: #FDBA74;
+   cursor: pointer;
+}
+
+main{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+#main{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+.movie-card{
+   max-width: 20rem;
+   height: 30rem;
+   margin: 20px;
+   background-color: white;
+   color: black;
+   display: flex;
+   flex-direction: column;
+   border-radius: 8px;
+}
+
+.movie-card img{
+   width: 100%;
+   background-size: cover;
+   border-top-right-radius: 8px;
+   border-top-left-radius: 8px;
+}
+
+.details{
+   overflow: hidden;
+   flex-grow: 1;
+   text-align: justify;
+}
+
+.title{
+   padding: 10px;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.desc{
+   padding: 10px;
+}
+
+.release-date{
+   padding: 10px;
+}
+
+footer{
+   text-align: center;
+   padding: 20px 0;
+}
+
+.genres{
+   padding: 0 10px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.genre{
+   padding: 5px 10px;
+   margin: 1px;
+   border: 2px solid rgb(70, 70, 70);
+   color: rgb(70, 70, 70);
+   border-radius: 18px;
+}
+
+.page-no ul{
+   display: flex;
+   list-style-type: none;
+   justify-content: center;
+   gap: 1rem;
+}
+
+.page-no ul li button{
+   padding: 5px 10px;
+   background-color: transparent;
+   color: white;
+   border: 2px solid white;
+   border-radius: 32px;
+}
+
+.page-no ul li button:hover{
+   border-color: #F97316;
+   color: #F97316;
+   cursor: pointer;
+}
