@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>GitHub user data</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <main>
+      <div class="container">
+         <h1>Enter GitHub username to view data</h1>
+         <form id="inputform">
+            <input type="text" required placeholder="Enter GitHub username here" id="userinput" />
+            <input type="submit" value="Get Data" id="btn" />
+         </form>
+         <div class="result">
+         </div>
+      </div>
+   </main>
+</body>
+<script>
+   const userinput = document.querySelector("#userinput");
+   const showResult = document.querySelector(".result");
+   document.querySelector("#inputform").addEventListener("submit", (e)=>{
+      e.preventDefault();
+      const url = `https://api.github.com/users/${userinput.value}`;
+      userinput.value = "";
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.send();
+      xhr.onreadystatechange = function (){
+         if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            if(data.login){
+               showResult.innerHTML = `
+                  <div class="result-card">
+                     <img src="${data.avatar_url}" alt="GitHub Avatar">
+                     <div class="details">
+                        <div class="name">${data.name}</div>
+                        <div class="username">${data.login}</div>
+                        <div class="followers">Followers: ${data.followers}</div>
+                        <div class="repos">Public repos: ${data.public_repos}</div>
+                        <a class="github" href="${data.html_url}" target="_blank">Go to GitHub</a>
+                     </div>
+                  </div>`;
+            }else{
+               showResult.innerHTML = "<div class='error'>The username provided is not valid</div>"
+            }
+         }
+      }
+   })
+</script>
+</html>

@@ -1,0 +1,112 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+body{
+   background-color: #2c2c2c;
+   color: white;
+}
+
+main{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   align-items: center;
+}
+
+form{
+   display: flex;
+   flex-direction: column;
+   width: 20rem;
+   padding: 20px 0;
+}
+
+#userinput{
+   font-size: 18px;
+   text-align: center;
+   padding: 5px 10px;
+   margin: 10px 0;
+   border-radius: 4px;
+   border: 2px solid white;
+}
+
+#btn{
+   padding: 10px 0;
+   color: white;
+   font-weight: 700;
+   background-color: orange;
+   border: 2px solid orange;
+   border-radius: 12px;
+}
+
+#btn:hover{
+   cursor: pointer;
+   background-color: rgb(255, 198, 92);
+}
+
+img{
+   width: 15rem;
+   border-radius: 50%;
+   border: 2px solid white;
+}
+
+.result-card{
+   display: flex;
+   padding: 20px 40px;
+   border-radius: 12px;
+   gap: 3rem;
+   background-color:  #CBD5E1;
+   color: black;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.details{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 0.3rem;
+}
+
+.name{
+   font-weight: 800;
+   font-size: 20px;
+}
+
+.username{
+   font-weight: 600;
+}
+
+.github{
+   padding: 8px 0;
+   background-color: white;
+   border: 2px solid white;
+   border-radius: 6px;
+   font-weight: 700;
+}
+
+.github:hover{
+   cursor: pointer;
+   border-color: #475569;
+}
+
+a{
+   text-decoration: none;
+   color: black;
+   text-align: center;
+}
+
+.error{
+   color: rgb(246, 93, 93);
+   font-size: 20px;
+   font-weight: 700;
+}
