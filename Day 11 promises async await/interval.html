@@ -26,7 +26,7 @@
    let print;
    start.addEventListener("click", (e)=>{
       print = setInterval(()=>{
-         console.log("Printing...", Date.now().toLocaleDateString());
+         console.log("Printing...", Date.now());
       }, 1000);
    })
    stop.addEventListener("click", (e)=>{
@@ -42,8 +42,11 @@
       let timeStamp1 = new Date();
       printTime = setInterval(()=>{
          let timeStamp2 = new Date();
-         display.innerHTML = `${Math.round((timeStamp2.getTime() - timeStamp1.getTime()) / 60000)} : ${Math.round((timeStamp2.getTime() - timeStamp1.getTime())/1000)} : ${timeStamp2.getTime() - timeStamp1.getTime()}`;
+         display.innerHTML = `${Math.round((timeStamp2.getTime() - timeStamp1.getTime()) / 60000)} : ${Math.round((timeStamp2.getTime() - timeStamp1.getTime())/1000)} : ${String(timeStamp2.getTime() - timeStamp1.getTime()).slice(0, 3)}`;
       }, 1)
-   })
+   });
+   stopTime.addEventListener("click", (e)=>{
+      clearInterval(printTime);
+   });
 </script>
 </html>
