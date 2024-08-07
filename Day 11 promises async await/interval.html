@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>setInterval</title>
+   <style>
+      body{
+         background-color: #414141;
+         color: white;
+      }
+   </style>
+</head>
+<body>
+   <h1>Printing with setInterval</h1>
+   <button id="start">Start</button>
+   <button id="stop">Stop</button>
+   <h1>Stop watch</h1>
+   <h2 id="display">00 : 00 : 000</h2>
+   <button id="start-time">Start</button>
+   <button id="stop-time">Stop</button>
+</body>
+<script>
+   const start = document.querySelector("#start");
+   const stop = document.querySelector("#stop");
+   let print;
+   start.addEventListener("click", (e)=>{
+      print = setInterval(()=>{
+         console.log("Printing...", Date.now().toLocaleDateString());
+      }, 1000);
+   })
+   stop.addEventListener("click", (e)=>{
+      clearInterval(print);
+      console.log("Printing stopped.");
+   })
+
+   const startTime = document.querySelector("#start-time");
+   const stopTime = document.querySelector("#stop-time");
+   const display = document.querySelector("#display");
+   let printTime;
+   startTime.addEventListener("click", (e)=>{
+      let timeStamp1 = new Date();
+      printTime = setInterval(()=>{
+         let timeStamp2 = new Date();
+         display.innerHTML = `${Math.round((timeStamp2.getTime() - timeStamp1.getTime()) / 60000)} : ${Math.round((timeStamp2.getTime() - timeStamp1.getTime())/1000)} : ${timeStamp2.getTime() - timeStamp1.getTime()}`;
+      }, 1)
+   })
+</script>
+</html>
