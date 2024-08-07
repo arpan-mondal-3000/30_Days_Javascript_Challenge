@@ -82,10 +82,12 @@ const genres = [
 const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=${API_KEY}`;
 
 const main = document.querySelector("main");
+main.innerHTML = "<h1>Getting movies...</h1>";
 
 fetch(url)
   .then((res) => res.json())
   .then((movies) => {
+    main.innerHTML = "";
     movies.results.forEach((e, idx) => {
       const genre_name = [];
       e.genre_ids.map((genre_id) => {
@@ -117,22 +119,24 @@ fetch(url)
     });
   })
   .catch((e) => {
-    console.log(e);
+    main.innerHTML = "<h1 style='color:red'>Something went wrong!!!</h1>";
   });
 
 const pageNo = document.querySelector(".page-no");
 pageNo.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
+    e.target.style.color = "red";
     const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${Number(
       e.target.innerText
     )}&sort_by=popularity.desc&api_key=${API_KEY}`;
 
     const main = document.querySelector("main");
-    main.innerHTML = "";
+    main.innerHTML = "<h1>Getting movies...</h1>";
 
     fetch(url)
       .then((res) => res.json())
       .then((movies) => {
+        main.innerHTML = "";
         movies.results.forEach((e, idx) => {
           const genre_name = [];
           e.genre_ids.map((genre_id) => {
@@ -164,7 +168,7 @@ pageNo.addEventListener("click", (e) => {
         });
       })
       .catch((e) => {
-        console.log(e);
+        main.innerHTML = "<h1 style='color: red'>Something went wrong!!!</h1>";
       });
   }
 });

@@ -8,6 +8,8 @@
 body{
    background-color: #1E293B;
    color: white;
+   position: relative;
+   min-height: 93vh;
 }
 
 nav{
@@ -74,6 +76,8 @@ main{
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   margin-top: 10px;
+   padding-bottom: 2.5rem;
 }
 
 #main{
@@ -81,6 +85,7 @@ main{
    flex-wrap: wrap;
    justify-content: center;
    margin-top: 10px;
+   padding-bottom: 2.5rem;
 }
 
 .movie-card{
@@ -124,6 +129,11 @@ main{
 footer{
    text-align: center;
    padding: 20px 0;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 2.5rem;
+
 }
 
 .genres{
@@ -138,6 +148,10 @@ footer{
    border: 2px solid rgb(70, 70, 70);
    color: rgb(70, 70, 70);
    border-radius: 18px;
+}
+
+.page-no{
+   margin: 10px 0;
 }
 
 .page-no ul{
