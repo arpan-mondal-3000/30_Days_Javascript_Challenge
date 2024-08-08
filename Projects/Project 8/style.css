@@ -1,0 +1,122 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+body{
+   background-color: #FEE2E2;
+   color: #1E293B;
+}
+
+main{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.form-area{
+   margin-top: 5rem;
+   padding: 5rem 0 2rem 0;
+
+}
+
+h1{
+   text-align: center;
+}
+
+form{
+   display: flex;
+   margin-top: 10px;
+}
+
+form input{
+   padding: 10px 20px;
+   font-size: 18px;
+   outline: none;
+}
+
+form input[type="submit"]{
+   background-color: #ff8f34;
+   border: 2px solid black;
+   color: white;
+   font-weight: 700;
+   border-top-right-radius: 6px;
+   border-bottom-right-radius: 6px;
+   border-left: none;
+}
+
+form input[type="submit"]:hover{
+   cursor: pointer;
+   background-color: #ffa153;
+}
+
+form input[type="text"]{
+   border-top-left-radius: 6px;
+   border-bottom-left-radius: 6px;
+   border: 2px solid black;
+   border-right: none;
+}
+
+ul{
+   list-style-type: none;
+   width: 25rem;
+   padding-bottom: 3rem;
+}
+
+ul li{
+   color: white;
+   border: 2px solid black;
+   border-radius: 12px;
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   margin: 10px 0;
+   align-items: center;
+}
+
+.task{
+   flex-basis: 3/4;
+   display: flex;
+}
+
+.options{
+   flex-basis: 1/4;
+   display: flex;
+   gap: 0.3rem;
+   margin-left: 1rem;
+}
+
+.incomplete{
+   background-color: #ffa153;
+}
+
+.complete{
+   background-color: #22C55E;
+}
+
+#task-toggle{
+   cursor: pointer;
+   display: block;
+}
+
+label{
+   margin-left: 10px;
+   font-size: 18px;
+   font-weight: 700;
+   text-align: justify;
+}
+
+button{
+   padding: 5px;
+   border: 2px solid black;
+   border-radius: 4px;
+   background-color: white;
+}
+
+button:hover{
+   cursor: pointer;
+   background-color: #e0e0e0;
+}
