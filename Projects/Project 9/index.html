@@ -1,21 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>E-buy</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <nav>
-      
-   </nav>
-   <main>
-      
-   </main>
-   <footer>
-
-   </footer>
-   <script type="module" src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-buy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">
+        <h1>E-Buy</h1>
+      </a>
+      <ul>
+        <a href="/">
+          <li>Home</li>
+        </a>
+        <a href="/about">
+          <li>About</li>
+        </a>
+        <a href="/checkout">
+          <li>Checkout</li>
+        </a>
+      </ul>
+      <div class="cart">
+        <a href="/cart">
+          <div class="cart-container">
+            <img src="./cart-shopping-solid.svg" alt="Cart" id="cart" />
+            <span>3</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <div class="product-container" id="1">
+        <div class="product-img">
+          <img
+            src="https://raw.githubusercontent.com/seebham/ecommerce-dummy-data/main/images/SamsungM311.jpg"
+            alt="product image"
+          />
+        </div>
+        <div class="product-details">
+           <div class="product-name">
+              Samsung Galaxy M31
+           </div>
+           <div class="specs">
+                RAM: 4 GB
+           </div>
+           <div class="price">
+                &#8377 12999
+           </div>
+            <div class="buttons">
+            <button class="btn add">
+                Add to cart        
+            </button>
+            <button class="btn buy">
+                Buy now 
+            </button>
+            </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
