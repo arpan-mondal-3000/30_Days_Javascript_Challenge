@@ -61,4 +61,11 @@ fetch(dataUrl)
       if (i == 10) break;
       i++;
     }
+
+    // Add to cart functionality
+    document.querySelectorAll(".add").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        console.log(e.target.id);
+      });
+    });
   });
