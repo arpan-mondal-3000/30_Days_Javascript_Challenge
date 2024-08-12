@@ -14,18 +14,23 @@ body {
   background-color: #e2e8f0;
 }
 
-main{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 nav {
   display: flex;
   align-items: center;
   padding: 1rem 3rem;
   justify-content: space-between;
   background-color: #fff;
+  position: fixed;
+  width: 100vw;
+  height: 4rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 6rem;
 }
 
 ul {

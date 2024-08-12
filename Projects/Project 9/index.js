@@ -1,3 +1,5 @@
+import { addToCart } from "./utils.js";
+
 let dataUrl = "./data.json";
 
 // fetching product data
@@ -42,7 +44,7 @@ fetch(dataUrl)
               ${product_title}
            </div>
            <div class="specs">
-                ${specs}
+                <b>Specs:</b> ${specs}
            </div>
            <div class="price">
                 &#8377 ${price}
@@ -65,7 +67,27 @@ fetch(dataUrl)
     // Add to cart functionality
     document.querySelectorAll(".add").forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        console.log(e.target.id);
+        addToCart(e);
       });
     });
+
+    // Setting the quantity in cart and disabling the buttons of products which have been bought
+    const productsBought = localStorage.getItem("products");
+    const cartQuantity = document.querySelector("#amount");
+    if (productsBought) {
+      // Setting quantity in cart
+      const productArr = JSON.parse(productsBought);
+      cartQuantity.innerHTML = productArr.length;
+
+      // Disabling the buttons
+      productArr.forEach((product) => {
+        const prod = document.querySelector(`#${product.id}`);
+        const addBtn = prod.lastElementChild.lastElementChild.firstElementChild;
+        addBtn.innerHTML = "Added";
+        addBtn.style.backgroundColor = "#f08700";
+        addBtn.style.borderColor = "#f08700";
+        addBtn.style.color = "white";
+        addBtn.setAttribute("disabled", "true");
+      });
+    } else cartQuantity.innerHTML = "0";
   });
