@@ -48,5 +48,31 @@ function addToCart(e) {
 }
 
 // Remove from cart functionality
+function removeFromCart(e) {
+  // Accessing the localstorage for removing the product
+  const localProducts = localStorage.getItem("products");
+  // Converting it into json
+  const jsonProducts = JSON.parse(localProducts);
+  // Looping over all the products and removing the desired one and storing it in a new array
+  const updatedProducts = jsonProducts.filter(
+    (product) => product.id !== e.target.id
+  );
+  // Setting it in localStorage
+  localStorage.setItem("products", JSON.stringify(updatedProducts));
 
-export { addToCart };
+  // Removing the element from the DOM
+  const main = document.querySelector("main");
+  const productTobeRemoved = document.querySelector(`#${e.target.id}`);
+  main.removeChild(productTobeRemoved);
+
+  // Updating the cart amount
+  const amount = document.querySelector("#amount");
+  amount.innerHTML = updatedProducts.length;
+
+  // Showing cart is empty if cart is empty
+  if (!updatedProducts.length) {
+    main.innerHTML = "<h1>Your cart is empty<br/>Keep Shopping :)</h1>";
+  }
+}
+
+export { addToCart, removeFromCart };

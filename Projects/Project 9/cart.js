@@ -1,14 +1,18 @@
+import { removeFromCart } from "./utils.js";
+
 // Updating the amount of items in nav bar and rendering the products in DOM
 const data = localStorage.getItem("products");
 const amount = document.querySelector("#amount");
+const main = document.querySelector("main");
+let numberOfProducts = 0;
+
 if (data) {
   // Updating the amount in nav bar
   const jsonData = JSON.parse(data);
+  numberOfProducts = jsonData.length;
   amount.innerHTML = jsonData.length;
 
   // Rendering products in DOM
-  const main = document.querySelector("main");
-
   jsonData.forEach((product) => {
     const new_product = document.createElement("div");
     new_product.className = "product-container";
@@ -43,4 +47,17 @@ if (data) {
   });
 } else {
   amount.innerHTML = "0";
+  main.innerHTML = "<h1>Your cart is empty<br/>Keep Shopping :)</h1>";
 }
+
+// Showing cart is empty if cart is empty
+if (!numberOfProducts)
+  main.innerHTML = "<h1>Your cart is empty<br/>Keep Shopping :)</h1>";
+
+// Implementing remove from cart
+document.querySelectorAll(".remove").forEach((button) => {
+  // Looping over all the buttons and adding event listeners
+  button.addEventListener("click", (e) => {
+    removeFromCart(e);
+  });
+});
