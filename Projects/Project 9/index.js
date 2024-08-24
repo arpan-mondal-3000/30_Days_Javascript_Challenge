@@ -1,4 +1,4 @@
-import { addToCart } from "./utils.js";
+import { addToCart, buyNow } from "./utils.js";
 
 let dataUrl = "./data.json";
 
@@ -88,6 +88,13 @@ fetch(dataUrl)
         addBtn.style.borderColor = "#f08700";
         addBtn.style.color = "white";
         addBtn.setAttribute("disabled", "true");
+      });
+
+      // Buy now functionality
+      document.querySelectorAll(".buy").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          buyNow(e);
+        });
       });
     } else cartQuantity.innerHTML = "0";
   });

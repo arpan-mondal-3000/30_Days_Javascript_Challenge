@@ -75,4 +75,10 @@ function removeFromCart(e) {
   }
 }
 
-export { addToCart, removeFromCart };
+// Buy now functionality
+function buyNow(e) {
+  // Taking user to buy now page and the rest of the functionality will be handled by buy.js
+  window.location.assign(`./buy.html?id=${e.target.id}`);
+}
+
+export { addToCart, removeFromCart, buyNow };

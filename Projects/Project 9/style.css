@@ -140,3 +140,59 @@ main img {
   color: #fff;
   border-color: #f08700;
 }
+
+.remove{
+  border: 2px solid rgb(255, 161, 161);
+  color: rgb(255, 99, 99);
+}
+
+.remove:hover{
+  background-color: rgb(255, 99, 99);
+  border: 2px solid rgb(255, 99, 99);
+}
+
+/* Buy page style */
+.bill-container{
+  background-color: #fff;
+  padding: 3rem 5rem;
+  border-radius: 3px;
+  margin-bottom: 4rem;
+}
+
+.bill-head{
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bill-products{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgb(186, 186, 186);
+  padding: 1rem 2rem;
+  border-radius: 5px; 
+}
+
+.bill-product-details{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.bill-product-img img{
+  width: 4rem;
+}
+
+.bill-total{
+  margin-bottom: 1rem;
+}
+
+.confirmation{
+  background-color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  padding: 2rem 3rem;
+}

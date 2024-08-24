@@ -1,4 +1,4 @@
-import { removeFromCart } from "./utils.js";
+import { removeFromCart, buyNow } from "./utils.js";
 
 // Updating the amount of items in nav bar and rendering the products in DOM
 const data = localStorage.getItem("products");
@@ -59,5 +59,12 @@ document.querySelectorAll(".remove").forEach((button) => {
   // Looping over all the buttons and adding event listeners
   button.addEventListener("click", (e) => {
     removeFromCart(e);
+  });
+
+  // Buy now functionality
+  document.querySelectorAll(".buy").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      buyNow(e);
+    });
   });
 });
